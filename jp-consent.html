@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <meta charset="utf-8" />
     <script></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Moneytree</title>
     <meta name="theme-color" content="#ffffff" />
     <style>
@@ -23,11 +23,15 @@
       }
 
       .header {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: center;
+
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        display: block;
         width: 100%;
         height: 60px;
 
@@ -47,18 +51,28 @@
 
         display: flex;
         justify-content: center;
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
 
-        width: 60px;
-        height: 60px;
-      }
-
-      .back-to svg {
-        width: 40px;
+        min-width: 40px;
         height: 40px;
 
         margin-left: 10px;
+      }
+
+      a:link,
+      a​:active,
+      a​:visited,
+      a​:hover {
+        color: #333333;
+        text-decoration: none;
+      }
+
+      .back-to svg {
+        width: 20px;
+        height: 20px;
+
+        margin-right: 10px;
       }
 
       .consent-iframe {
@@ -92,16 +106,18 @@
   <body>
     <div class="header">
       <a class="back-to" href="javascript:window.history.go(-1);">
-        <svg enable-background="new 0 0 1000 1000" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+        <svg height="768" viewBox="0 0 768 768" width="768" xmlns="http://www.w3.org/2000/svg">
           <path
-            d="m990 500c0-270.6-219.4-490-490-490s-490 219.4-490 490 219.4 490 490 490 490-219.4 490-490zm-453.3-233 63.3 63.3-173.3 173.3 188.7 188.7-63 63-252-252z"
+            d="m281.543 384.576-30.662 32.735c-18.122 19.348-48.498 20.341-67.846 2.219-.327-.306-.648-.616-.964-.929l-2.553-2.734c-3.088-3.576-5.555-7.478-7.41-11.572-2.969-6.565-4.391-13.675-4.249-20.768.145-7.094 1.855-14.14 5.086-20.579.34-.676.697-1.345 1.071-2.008 1.941-3.451 4.338-6.702 7.183-9.662l313.732-334.951c18.122-19.348 48.498-20.341 67.846-2.219s20.341 48.498 2.219 67.846l-283.452 302.624 282.787 302.861c17.325 20.065 15.104 50.376-4.961 67.701s-50.376 15.104-67.701-4.961l-309.597-331.575z"
           /></svg
-      ></a>
+        >戻る</a
+      >
     </div>
 
     <iframe
       class="consent-iframe"
       frameborder="0"
+      title="Privacy Policy"
       src="https://www.first-bank.co.jp/policy/privacy/policy2.html"
     ></iframe>
   </body>
